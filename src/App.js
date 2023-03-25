@@ -10,6 +10,8 @@ import Nav from './components/nav/Nav';
 import NotFound from './components/notFound/NotFound';
 import Register from './components/register/Register';
 import Notes from './components/notes/Notes';
+import AddNote from './components/addNote/AddNote';
+import EditNote from './components/editNote/EditNote';
 
 
 function App() {
@@ -45,6 +47,9 @@ function App() {
                                         <div className="content">
                                           <Switch>
                                             <Route exact path='/' element={<Notes />} />
+                                            <Route exact path='/add' element={<AddNote />} />
+                                            <Route exact path='/:id/edit' element={<EditNote />} />
+                                            <Route path='*' element={<NotFound/>} />
                                           </Switch>
                                         </div>
                                       </div>)};
