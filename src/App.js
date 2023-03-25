@@ -9,6 +9,7 @@ import Login from './components/login/Login';
 import Nav from './components/nav/Nav';
 import NotFound from './components/notFound/NotFound';
 import Register from './components/register/Register';
+import Notes from './components/notes/Notes';
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
                                         <Nav theme={theme} setTheme={setTheme} setIsLogged={setIsLogged} />
                                         <div className="content">
                                           <Switch>
+                                            <Route exact path='/' element={<Notes />} />
                                           </Switch>
                                         </div>
                                       </div>)};
