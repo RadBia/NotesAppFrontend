@@ -8,6 +8,7 @@ import {
 import Login from './components/login/Login';
 import Nav from './components/nav/Nav';
 import NotFound from './components/notFound/NotFound';
+import Register from './components/register/Register';
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
   let notLoggedContent = () => {return (<div className="wrapper">
                                           <Switch>
                                               <Route exact path='/' element={<Login setIsLogged={setIsLogged} />}/>
+                                              <Route exact path='/register' element={<Register />}/>
                                               <Route path='*' element={<NotFound/>} />
                                           </Switch>
                                         </div>)};
