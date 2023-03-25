@@ -6,6 +6,7 @@ import {
   Route
 } from "react-router-dom";
 import Login from './components/login/Login';
+import Nav from './components/nav/Nav';
 
 
 function App() {
@@ -37,7 +38,8 @@ function App() {
   }, []);
 
   let loggedContent = () => {return (<div className={theme == false ? "wrapper" : "dark wrapper"}>
-                                         <div className="content">
+                                        <Nav theme={theme} setTheme={setTheme} setIsLogged={setIsLogged} />
+                                        <div className="content">
                                           <Switch>
                                           </Switch>
                                         </div>
@@ -45,6 +47,7 @@ function App() {
 
   let notLoggedContent = () => {return (<div className="wrapper">
                                           <Switch>
+                                              <Route exact path='/' element={<Login setIsLogged={setIsLogged} />}/>
                                           </Switch>
                                         </div>)};
   if(!isLogged) {
