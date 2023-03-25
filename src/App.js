@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Login from './components/login/Login';
 import Nav from './components/nav/Nav';
+import NotFound from './components/notFound/NotFound';
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
   let notLoggedContent = () => {return (<div className="wrapper">
                                           <Switch>
                                               <Route exact path='/' element={<Login setIsLogged={setIsLogged} />}/>
+                                              <Route path='*' element={<NotFound/>} />
                                           </Switch>
                                         </div>)};
   if(!isLogged) {
