@@ -25,3 +25,8 @@ npm start
 ```
 
 This command will execute the start script defined in the package.json file. Once the server is running, you can access the application in your web browser at http://localhost:3000.
+
+4. **Change a user's role**   
+After creating the user, change the `privilage` field from `user` to `admin` in the `testdb.user` table. It will add a list of users to the user panel.    
+
+![admin](https://user-images.githubusercontent.com/85350630/227769990-0d238b86-64ef-4271-a24c-785b9ab8f5ad.jpg)
